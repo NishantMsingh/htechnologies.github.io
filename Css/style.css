@@ -67,6 +67,10 @@ header {
   box-sizing: border-box;
 }
 
+.text-bold {
+  font-weight: bold;
+}
+
 .brgr1 {
   display: none;
 }
@@ -85,7 +89,7 @@ body, * {
   align-items: center;
 }
 .nvli li {
-  margin: 0px 5px;
+  margin: 5px 5px;
   font-family: Rajdhani;
   font-size: 16px;
 }
@@ -104,9 +108,10 @@ html {
     top: 0px;
     left: 0;
     width: 100vw;
-    height: 100vw;
+    height: auto;
     margin: 0px;
-    background-color: #353a3b;
+    background-color: rgba(53, 58, 59, 0.6117647059);
+    padding: 20px;
   }
   .nvli {
     position: relative;
@@ -117,9 +122,10 @@ html {
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
+    padding-top: 10px;
   }
   .nvli li {
-    margin: 3px 0px;
+    margin: 5px 0px;
     transition: all 0.5s ease-in-out;
   }
   .nvli li:hover {
