@@ -1,22 +1,22 @@
-const clo=document.getElementById("close");
+'use strict'
 
-clo.addEventListener("click",(e)=>{
-    e.preventDefault();
-    console.log("Closed");
-document.getElementById("nav").style.display="none";
+
+
+
+
+const burger=document.getElementById("burger");
+let flg=true;
+burger.addEventListener('click',()=>{
+   if(flg===true)
+   {
+    document.getElementById("head").classList.remove("header");
+    document.getElementById("head").classList.add("hide-and-show");
+    flg=false;
+   }
+   else
+   {
+    flg=true;
+    document.getElementById("head").classList.remove("hide-and-show");
+    document.getElementById("head").classList.add("header");
+   }
 });
-const open=document.getElementById("open");
-
-open.addEventListener("click",(e)=>{
-    e.preventDefault();
-    console.log("Closed");
-document.getElementById("nav").style.display="block";
-});
-
-setInterval(()=>{
-    const mediaQuery = window.matchMedia("(min-width: 760px)");
-
-if (mediaQuery.matches) {
-    document.getElementById("nav").style.display="block";
-} 
-},1000);
