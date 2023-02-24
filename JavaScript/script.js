@@ -1,9 +1,7 @@
 'use strict'
 
-
-
-
-
+let cookies = document.querySelector("#cookies, .cookiesHead")
+let close1 = document.querySelector(".close1");
 const burger=document.getElementById("burger");
 let flg=true;
 burger.addEventListener('click',()=>{
@@ -20,3 +18,13 @@ burger.addEventListener('click',()=>{
     document.getElementById("head").classList.add("header");
    }
 });
+
+setTimeout(()=>{
+   cookies.style.display="flex";
+  
+
+   },5000);
+
+   close1.addEventListener("click",()=>{
+      cookies.style.display="none"; 
+   })

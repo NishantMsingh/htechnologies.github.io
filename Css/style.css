@@ -46,10 +46,12 @@ ul, a, li {
 
 .nonli {
   list-style-type: none;
+  overflow: hidden;
 }
 
 .nav-ul {
   flex-direction: row;
+  overflow: hidden;
 }
 
 .display-6 {
@@ -72,7 +74,8 @@ ul, a, li {
 
 .header {
   height: 65px;
-  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  transition: all 0.2s ease;
 }
 
 #burger {
@@ -208,6 +211,63 @@ svg {
     transform: scaleY(1);
   }
 }
+#cookies.cookiesHead {
+  display: none;
+  /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.72); /* Black w/ opacity */
+}
+
+.cookies-modal {
+  min-height: 100px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+  background-color: rgba(217, 217, 217, 0.991);
+}
+
+.close1 {
+  float: right;
+  padding: 5px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid black;
+  transition: all 0.5s ease;
+}
+
+.close1:focus,
+.close1:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(19, 19, 19);
+  border-radius: 4px;
+  transition: all 0.5s ease;
+}
+
+.btn-accept, .btn-rejected {
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+.btn-rejected:hover {
+  background-color: rgba(0, 0, 0, 0.681) !important;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.btn-accept:hover {
+  background-color: rgba(0, 0, 0, 0.681) !important;
+  color: white;
+  transition: all 0.5s ease;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 768px) {
   .w-50 {
@@ -232,6 +292,9 @@ svg {
   #burger {
     display: block;
   }
+  body {
+    background-color: green;
+  }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
@@ -240,5 +303,19 @@ svg {
   .closefortab {
     display: none;
   }
+  body {
+    background-color: rgb(39, 39, 39);
+  }
 }
-/* Extra large devices (large laptops and desktops, 1200px and up) *//*# sourceMappingURL=style.css.map */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+  body {
+    background-color: yellow;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .section1 {
+    background-image: url("../Images/markus-spiske-FXFz-sW0uwo-unsplash.jpg");
+    background-size: cover;
+  }
+}/*# sourceMappingURL=style.css.map */
